@@ -8,17 +8,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Include header directories
-include_directories(${PROJECT_SOURCE_DIR}/include)
-
-# Main executable
-add_executable(playbook
-  source/main.cpp
-)
-
-# Compilation options (warnings, optimization)
-if(MSVC)
-  target_compile_options(playbook PRIVATE /W4)
-else()
-  target_compile_options(playbook PRIVATE -Wall -Wextra -Wpedantic)
-endif()
+# Add subdirectories for each layer
+add_subdirectory(source)
+add_subdirectory(apps)
