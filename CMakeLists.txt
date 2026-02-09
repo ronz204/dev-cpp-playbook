@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.2.2)
+cmake_minimum_required(VERSION 4.2)
 
 # Project name and version
 project(isw421-playbook VERSION 1.0.0 LANGUAGES CXX)
